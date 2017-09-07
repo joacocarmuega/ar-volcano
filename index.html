@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<script src="./vendor/aframe.min.js"></script>
+		<script src="./vendor/aframe-ar.js"></script>
+		<script src="./vendor/aframe-particle-system-component.min.js"></script>
+	</head>
+	<body style='margin : 0px; overflow: hidden;'>
+		<a-scene embedded arjs='trackingMethod: best;'>
+			<a-anchor hit-testing-enabled='true' preset='hiro'>
+				<a-entity position="0 .3 0" rotation="0 0 0" particle-system="color: #EF0000,#44CC00; size: 0.7; maxAge: 6; velocityValue: 0 10 0;"></a-entity>
+				<a-sphere position='0 .3 0' radius="0.3" material='color: #FF0000; opacity: 0.9;' size="0.05"></a-box>        
+			</a-anchor>
+			<a-camera-static/>
+		</a-scene>
+	</body>
+</html>
