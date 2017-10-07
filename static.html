@@ -1,11 +1,16 @@
-<!-- AR.js by @jerome_etienne - github: https://github.com/jeromeetienne/ar.js - info: https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf -->
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.1/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
-<script src="aframe-particle-system-component.min.js"></script>
-<body style='margin : 0px; overflow: hidden;'>
-	<a-scene>
-      
-        <a-entity position="0 .5 -5" rotation="0 0 0" particle-system="color: #EF0000,#44CC00; size: 0.7; maxAge: 6; velocityValue: 0 17 0;"></a-entity>
-   		<a-sphere position='0 1 -5' radius="0.4" material='color: #FF0000; opacity: 0.9;' size="0.05"></a-box>
-      
-	</a-scene>
-</body>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="myPlyModel"
+                      src="palmtree.ply"></a-asset-item>
+      </a-assets>
+      <a-entity ply-model="src: #myPlyModel"
+                rotation="-90 0 0"></a-entity>
+    </a-scene>
+  </body>
+</html>
